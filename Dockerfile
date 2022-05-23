@@ -1,12 +1,14 @@
-# Specify base image.
+
 FROM python:3.9
 
-# Set working directory.
 
-# Expose port 8000 for your FastAPI server.
+WORKDIR /AnshulGoyal-jtu-22-assignment
 
-# Install Python requirements using Pip.
+EXPOSE 8000
 
-# Copy your codebase into the Docker container.
+COPY ./requirements.txt /AnshulGoyal-jtu-22-assignment/requirements.txt
 
-# Run FastAPI server on the port exposed above.
+RUN pip install -r requirements.txt
+COPY . /AnshulGoyal-jtu-22-assignment 
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--reload"]

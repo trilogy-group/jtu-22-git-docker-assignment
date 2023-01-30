@@ -5,6 +5,7 @@ FROM python:3.9
 WORKDIR /app
 
 # Expose port 8000 for your FastAPI server.
+EXPOSE 8000
 
 # Install Python requirements using Pip.
 

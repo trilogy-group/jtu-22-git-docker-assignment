@@ -2,6 +2,7 @@
 FROM python:3.9
 
 # Set working directory.
+WORKDIR /app
 
 # Expose port 8000 for your FastAPI server.
 

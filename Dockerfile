@@ -13,5 +13,6 @@ COPY requirements.txt /app/requirements.txt
 RUN pip install -r /app/requirements.txt
 
 # Copy your codebase into the Docker container.
+COPY . /app/
 
 # Run FastAPI server on the port exposed above.
